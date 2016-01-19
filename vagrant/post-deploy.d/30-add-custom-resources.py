@@ -10,7 +10,7 @@ with open(config_file,'r') as f:
     config["resource_types"].extend([
         { "type": "s3-iam", "image": "docker:///governmentpaas/s3-resource" },
         { "type": "semver-iam", "image": "docker:///governmentpaas/semver-resource" },
-        { "type": "inline-shell", "image": "/tmp/inline-shell" }
+        { "type": "inline-shell", "image": "docker:///keymon/inline-shell-resource" }
     ])
 
     # Remove any duplicates hashing by type. via http://stackoverflow.com/a/11092590

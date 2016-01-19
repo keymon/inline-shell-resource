@@ -1,0 +1,15 @@
+---
+resources:
+  - name: a_resource
+    type: inline-shell
+    source:
+      test: one
+      other:
+        thing:
+          nested: true
+
+jobs:
+  - name: a_job
+    plan:
+    - get: a_resource
+
